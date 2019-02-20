@@ -16,29 +16,29 @@ console.log('decoded', decoded);
 
 
 
-// var message = 'I am user number';
-// var hash = SHA256(message).toString();
+var message = 'I am user number';
+var hash = SHA256(message).toString();
 
-// console.log(`Message ${message}`);
-// console.log(`Hash ${hash}`);
+console.log(`Message ${message}`);
+console.log(`Hash ${hash}`);
 
-// var data = {
-//     id: 4
-// };
+var data = {
+    id: 4
+};
 
-// var token = {
-//     data,
-//     hash: SHA256(JSON.stringify(data) + 'somesecret').toString()
-// }
+var token = {
+    data,
+    hash: SHA256(JSON.stringify(data) + 'somesecret').toString()
+}
 
-// token.data.id = 5;
-// token.hash = SHA256(JSON.stringify(token.data)).toString();
+token.data.id = 5;
+token.hash = SHA256(JSON.stringify(token.data)).toString();
 
 
-// var resultHash = SHA256(JSON.stringify(token.data) + 'somesecret').toString();
+var resultHash = SHA256(JSON.stringify(token.data) + 'somesecret').toString();
 
-// if(resultHash === token.hash){
-//     console.log('Data was not changed')
-// } else {
-//     console.log('Data was manipulated, do not trust');
-// }
+if(resultHash === token.hash){
+    console.log('Data was not changed')
+} else {
+    console.log('Data was manipulated, do not trust');
+}
