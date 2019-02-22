@@ -59,8 +59,10 @@ UserSchema.statics.findByToken = function(token) {
 
      try {
         decoded = jwt.verify(token, 'abc123'); 
+        console.log(decoded);
         
      } catch(e) {
+         console.log(e);
 
      }
 
