@@ -53,13 +53,12 @@ UserSchema.methods.generateAuthToken = function(){
 };
 
 UserSchema.statics.findByToken = function(token) {
-    console.log('token:', token);
     var User = this;
     var decoded;
 
      try {
         decoded = jwt.verify(token, 'abc123'); 
-        console.log(decoded);
+        // console.log('decoded',decoded);  // debug
         
      } catch(e) {
          console.log(e);
